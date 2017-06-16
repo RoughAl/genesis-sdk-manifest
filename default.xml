@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="ltd-dev"
-	  fetch="https://github.com/linaro-technologies-dev"/>
+	  fetch="https://github.com/linaro-technologies"/>
 
   <default remote="ltd-dev"
            revision="ltd-17.05"

@@ -1,22 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="ltd-dev"
-	  fetch="https://github.com/linaro-technologies"/>
-
-  <default remote="ltd-dev"
-           revision="ltd-17.05"
-	   sync-j="4"/>
-
-  <project name="zephyr"/>
-  <project name="mcuboot"/>
-
-  <project name="zephyr-fota-hawkbit"/>
-  <project name="genesis-sdk-build"
-	   path="sdk-build">
-	<linkfile src="genesis" dest="genesis"/>
+  <remote fetch="https://github.com/ARMmbed" name="ARMmbed" />
+  <remote fetch="https://github.com/linaro-technologies" name="linaro-technologies" />
+  
+  <default remote="linaro-technologies" revision="ltd-17.09" sync-j="4" />
+  
+  <project name="genesis-sdk-build" path="sdk-build" revision="001410de9ac697f84c0f30ce3ec926e8fe04349f" upstream="ltd-17.09">
+    <linkfile dest="genesis" src="genesis.py" />
   </project>
-  <project name="genesis-sdk-container"
-	   path="sdk-build/other/genesis-sdk-container"/>
-  <project name="ltd-docs"
-	   path="doc"/>
+  <project name="genesis-sdk-container" path="sdk-build/other/genesis-sdk-container" revision="c69e3f2acfd5e985abd59265031c815937189d49" upstream="ltd-17.09" />
+  <project clone-depth="1" name="genesis-sdk-prebuilt" path="sdk-build/other/genesis-sdk-prebuilt" revision="ad7fd50ba7ca2a8bf84afcdb510a6bd97e1cb0f4" upstream="ltd-17.09" />
+  <project name="ltd-docs" path="doc" revision="586a1d546139fcab50d6891c95cdb3038d463532" upstream="ltd-17.09" />
+  <project name="mbedtls" path="mcuboot/sim/mcuboot-sys/mbedtls" remote="ARMmbed" revision="f2a597fa3dd1c7b15e0fee62f6932b253295803d" />
+  <project name="mcuboot" revision="4b04a60850b84c33cb5883ceda362ff4e9209032" upstream="ltd-17.09" />
+  <project name="zephyr" revision="3f44986e2f8d27a5f8ca1bcba11cb2264b6fe5b9" upstream="ltd-17.09" />
+  <project name="zephyr-fota-samples" revision="8610acbc8eefb8d20664e98868f94f3c28a77666" upstream="ltd-17.09" />
 </manifest>
